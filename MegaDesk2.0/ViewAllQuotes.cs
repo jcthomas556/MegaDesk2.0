@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace MegaDesk
 {
-   public partial class Form1 : Form
+   public partial class ViewAllQuotes : Form
    {
-      public Form1()
+      public ViewAllQuotes()
       {
          InitializeComponent();
+      }
+
+      private void bttnCloseViewQuotes_Click(object sender, EventArgs e)
+      {
+         this.Close();
       }
    }
 }
