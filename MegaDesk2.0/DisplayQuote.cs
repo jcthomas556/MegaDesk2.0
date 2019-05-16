@@ -26,5 +26,10 @@ namespace MegaDesk
       {
          this.Close();
       }
+
+      private void DisplayQuote_Load(object sender, EventArgs e)
+      {
+
+      }
    }
 }

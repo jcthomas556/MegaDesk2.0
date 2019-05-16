@@ -12,8 +12,24 @@ namespace MegaDesk
 {
    public partial class MainMenu : Form
    {
+      /*
       private Form _mainMenu;
+      
+         InitializeComponent();
 
+         _mainMenu = mainMenu;
+
+         //populate materials combobox
+         List<Desk.DesktopMaterial> materials = Enum.GetValues(typeof(Desk.DesktopMaterial))
+                  .Cast<Desk.DesktopMaterial>().ToList();
+
+         comSurfaceMaterial.DataSource = materials;
+
+         //set default to empty
+         comSurfaceMaterial.SelectedIndex = -1;
+
+         }
+      */
       public MainMenu()
       {
          InitializeComponent();

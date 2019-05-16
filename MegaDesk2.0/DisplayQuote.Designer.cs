@@ -35,9 +35,10 @@
          // lblDisplayQuotes
          // 
          this.lblDisplayQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblDisplayQuotes.Location = new System.Drawing.Point(225, 37);
+         this.lblDisplayQuotes.Location = new System.Drawing.Point(338, 57);
+         this.lblDisplayQuotes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
          this.lblDisplayQuotes.Name = "lblDisplayQuotes";
-         this.lblDisplayQuotes.Size = new System.Drawing.Size(294, 39);
+         this.lblDisplayQuotes.Size = new System.Drawing.Size(441, 60);
          this.lblDisplayQuotes.TabIndex = 5;
          this.lblDisplayQuotes.Text = "Display Quotes";
          this.lblDisplayQuotes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -45,9 +46,10 @@
          // 
          // bttnCloseDisplayQuotes
          // 
-         this.bttnCloseDisplayQuotes.Location = new System.Drawing.Point(543, 375);
+         this.bttnCloseDisplayQuotes.Location = new System.Drawing.Point(814, 577);
+         this.bttnCloseDisplayQuotes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.bttnCloseDisplayQuotes.Name = "bttnCloseDisplayQuotes";
-         this.bttnCloseDisplayQuotes.Size = new System.Drawing.Size(166, 35);
+         this.bttnCloseDisplayQuotes.Size = new System.Drawing.Size(249, 54);
          this.bttnCloseDisplayQuotes.TabIndex = 18;
          this.bttnCloseDisplayQuotes.Text = "Cancel";
          this.bttnCloseDisplayQuotes.UseVisualStyleBackColor = true;
@@ -55,13 +57,15 @@
          // 
          // DisplayQuote
          // 
-         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+         this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(800, 450);
+         this.ClientSize = new System.Drawing.Size(1200, 692);
          this.Controls.Add(this.bttnCloseDisplayQuotes);
          this.Controls.Add(this.lblDisplayQuotes);
+         this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
          this.Name = "DisplayQuote";
          this.Text = "DisplayQuote";
+         this.Load += new System.EventHandler(this.DisplayQuote_Load);
          this.ResumeLayout(false);
 
       }
