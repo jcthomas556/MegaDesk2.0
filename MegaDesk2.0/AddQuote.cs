@@ -13,37 +13,36 @@ using System.Windows.Forms;
 
 namespace MegaDesk
 {
-   public partial class AddQuote : Form
-   {
-      public AddQuote()
-      {
-         InitializeComponent();
-            
+    public partial class AddQuote : Form
+    {
+        public AddQuote()
+        {
+            InitializeComponent();
 
         }
 
         public JObject document = JObject.Parse(File.ReadAllText("document.json"));
 
         private void textBox2_TextChanged(object sender, EventArgs e)
-      {
+        {
 
-      }
+        }
 
-      private void textBox1_TextChanged(object sender, EventArgs e)
-      {
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
-      }
+        }
 
-      private void bttnCloseNewQuote_Click(object sender, EventArgs e)
-      {
-         this.Close();
-      }
+        private void bttnCloseNewQuote_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-      private void AddQuote_Load(object sender, EventArgs e)
-      {
+        private void AddQuote_Load(object sender, EventArgs e)
+        {
             fillSurfaceMaterials();
             fillShippingOptions();
-      }
+        }
 
         public decimal getWeight()
         {
@@ -109,7 +108,7 @@ namespace MegaDesk
         {
             // read combobox surface material
             MessageBox.Show("Surface: " + comboBoxSurfaceMaterial.SelectedItem.ToString());
-            MessageBox.Show("Shipping Cost: "+  getShippingCost().ToString());
+            MessageBox.Show("Shipping Cost: " + getShippingCost().ToString());
 
         }
     }
