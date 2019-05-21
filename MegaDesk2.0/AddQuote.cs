@@ -104,11 +104,34 @@ namespace MegaDesk
 
         }
 
+        public bool validationErrors()
+        {
+            bool errors = false;
+
+            if (comboBoxSurfaceMaterial.SelectedIndex == -1) //Nothing selected
+            {
+                MessageBox.Show("You must select a surface material", "Error");
+                errors = true;
+            }
+
+            if (comboBoxDelivery.SelectedIndex == -1) //Nothing selected
+            {
+                MessageBox.Show("You must select a delivery option", "Error");
+                errors = true;
+            }
+
+            return errors;
+
+        }
+
         private void BttnGetQuote_Click(object sender, EventArgs e)
         {
-            // read combobox surface material
-            MessageBox.Show("Surface: " + comboBoxSurfaceMaterial.SelectedItem.ToString());
-            MessageBox.Show("Shipping Cost: " + getShippingCost().ToString());
+
+            if (!validationErrors())
+            {
+                MessageBox.Show("Surface: " + comboBoxSurfaceMaterial.SelectedItem.ToString());
+                MessageBox.Show("Shipping Cost: " + getShippingCost().ToString());
+            }
 
         }
     }
