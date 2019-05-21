@@ -18,8 +18,11 @@ namespace MegaDesk
       public AddQuote()
       {
          InitializeComponent();
+            
 
-      }
+        }
+
+        public JObject document = JObject.Parse(File.ReadAllText("document.json"));
 
         private void textBox2_TextChanged(object sender, EventArgs e)
       {
@@ -38,13 +41,50 @@ namespace MegaDesk
 
       private void AddQuote_Load(object sender, EventArgs e)
       {
-            getSurfaceMaterial();
+            fillSurfaceMaterials();
+            fillShippingOptions();
       }
 
-        public void getSurfaceMaterial()
+        public decimal getWeight()
         {
-            JObject document = JObject.Parse(File.ReadAllText("document.json"));
+            decimal depth = numericUpDownDepth.Value;
 
+            decimal width = numericUpDownWidth.Value;
+
+            decimal surfaceArea = (depth * width);
+
+            return surfaceArea;
+
+        }
+
+        public decimal getShippingCost()
+        {
+            int shippingPrice;
+
+            JObject shippingOptions = (JObject)document["shippingOptions"];
+
+            if (getWeight() <= 1000)
+            {
+                shippingPrice = int.Parse(shippingOptions[comboBoxDelivery.SelectedItem][0].ToString());
+            }
+
+            else if (getWeight() > 1000 && getWeight() < 2000)
+            {
+                shippingPrice = int.Parse(shippingOptions[comboBoxDelivery.SelectedItem][1].ToString());
+            }
+
+            else
+            {
+                shippingPrice = int.Parse(shippingOptions[comboBoxDelivery.SelectedItem][2].ToString());
+
+            }
+
+            return shippingPrice;
+        }
+
+
+        public void fillSurfaceMaterials()
+        {
             JObject surfaceMaterial = (JObject)document["surfaceMaterial"];
 
             foreach (JProperty property in surfaceMaterial.Properties())
@@ -54,12 +94,22 @@ namespace MegaDesk
 
         }
 
+        public void fillShippingOptions()
+        {
+            JObject shippingOptions = (JObject)document["shippingOptions"];
+
+            foreach (JProperty property in shippingOptions.Properties())
+            {
+                comboBoxDelivery.Items.Add(property.Name);
+            }
+
+        }
+
         private void BttnGetQuote_Click(object sender, EventArgs e)
         {
             // read combobox surface material
-            MessageBox.Show(comboBoxSurfaceMaterial.SelectedItem.ToString());
-
-
+            MessageBox.Show("Surface: " + comboBoxSurfaceMaterial.SelectedItem.ToString());
+            MessageBox.Show("Shipping Cost: "+  getShippingCost().ToString());
 
         }
     }

@@ -53,7 +53,7 @@
             // inputCustomerName
             // 
             this.inputCustomerName.Location = new System.Drawing.Point(203, 137);
-            this.inputCustomerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputCustomerName.Margin = new System.Windows.Forms.Padding(4);
             this.inputCustomerName.Name = "inputCustomerName";
             this.inputCustomerName.Size = new System.Drawing.Size(486, 22);
             this.inputCustomerName.TabIndex = 0;
@@ -92,7 +92,7 @@
             // numericUpDownWidth
             // 
             this.numericUpDownWidth.Location = new System.Drawing.Point(237, 276);
-            this.numericUpDownWidth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDownWidth.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDownWidth.Maximum = new decimal(new int[] {
             48,
             0,
@@ -116,7 +116,7 @@
             // 
             this.comboBoxSurfaceMaterial.FormattingEnabled = true;
             this.comboBoxSurfaceMaterial.Location = new System.Drawing.Point(603, 274);
-            this.comboBoxSurfaceMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxSurfaceMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxSurfaceMaterial.Name = "comboBoxSurfaceMaterial";
             this.comboBoxSurfaceMaterial.Size = new System.Drawing.Size(160, 24);
             this.comboBoxSurfaceMaterial.TabIndex = 6;
@@ -124,12 +124,8 @@
             // comboBoxDelivery
             // 
             this.comboBoxDelivery.FormattingEnabled = true;
-            this.comboBoxDelivery.Items.AddRange(new object[] {
-            "3 Day",
-            "5 Day",
-            "7 Day"});
             this.comboBoxDelivery.Location = new System.Drawing.Point(603, 318);
-            this.comboBoxDelivery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxDelivery.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxDelivery.Name = "comboBoxDelivery";
             this.comboBoxDelivery.Size = new System.Drawing.Size(160, 24);
             this.comboBoxDelivery.TabIndex = 7;
@@ -137,7 +133,7 @@
             // numericUpDownDepth
             // 
             this.numericUpDownDepth.Location = new System.Drawing.Point(237, 318);
-            this.numericUpDownDepth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDownDepth.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDownDepth.Maximum = new decimal(new int[] {
             48,
             0,
@@ -160,7 +156,7 @@
             // numericUpDownNumOfDrawers
             // 
             this.numericUpDownNumOfDrawers.Location = new System.Drawing.Point(603, 230);
-            this.numericUpDownNumOfDrawers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDownNumOfDrawers.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDownNumOfDrawers.Maximum = new decimal(new int[] {
             7,
             0,
@@ -218,7 +214,7 @@
             // bttnGetQuote
             // 
             this.bttnGetQuote.Location = new System.Drawing.Point(203, 395);
-            this.bttnGetQuote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bttnGetQuote.Margin = new System.Windows.Forms.Padding(4);
             this.bttnGetQuote.Name = "bttnGetQuote";
             this.bttnGetQuote.Size = new System.Drawing.Size(221, 43);
             this.bttnGetQuote.TabIndex = 15;
@@ -229,7 +225,7 @@
             // bttnCloseNewQuote
             // 
             this.bttnCloseNewQuote.Location = new System.Drawing.Point(468, 395);
-            this.bttnCloseNewQuote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bttnCloseNewQuote.Margin = new System.Windows.Forms.Padding(4);
             this.bttnCloseNewQuote.Name = "bttnCloseNewQuote";
             this.bttnCloseNewQuote.Size = new System.Drawing.Size(221, 43);
             this.bttnCloseNewQuote.TabIndex = 17;
@@ -258,7 +254,7 @@
             this.Controls.Add(this.lblCustomerName);
             this.Controls.Add(this.lblDeskSize);
             this.Controls.Add(this.inputCustomerName);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddQuote";
             this.Text = "AddQuote";
             this.Load += new System.EventHandler(this.AddQuote_Load);
