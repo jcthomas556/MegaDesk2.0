@@ -21,5 +21,10 @@ namespace MegaDesk
       {
          this.Close();
       }
-   }
+
+        private void ViewAllQuotes_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
