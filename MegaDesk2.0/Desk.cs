@@ -11,9 +11,9 @@ namespace MegaDesk
       public decimal Width;
       public decimal Depth;
       public decimal NumberOfDrawers;
-      public int SurfaceMaterial;
+      public string SurfaceMaterial;
 
-      public Desk(decimal Width, decimal Depth, decimal NumberOfDrawers, int SurfaceMaterial)
+      public Desk(decimal Width, decimal Depth, decimal NumberOfDrawers, string SurfaceMaterial)
       {
          this.Width = Width;
          this.Depth = Depth;
