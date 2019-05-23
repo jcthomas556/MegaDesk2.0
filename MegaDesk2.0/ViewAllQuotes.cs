@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +26,15 @@ namespace MegaDesk
 
         private void ViewAllQuotes_Load(object sender, EventArgs e)
         {
+            string fileName = "quotes.json";
+
+            List<DeskQuote> result = JsonConvert.DeserializeObject<List<DeskQuote>>(File.ReadAllText(fileName));
+
+            dataGridView1.DataSource = result.Select(d => new
+            {
+                Date = d.QuoteDate,
+                QuotePrice = d.QuotePrice.ToString("c")
+            }).ToList();
 
         }
     }
