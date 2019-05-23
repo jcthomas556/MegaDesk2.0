@@ -6,22 +6,14 @@ using System.Threading.Tasks;
 
 namespace MegaDesk
 {
-    public enum DesktopMaterial
-    {
-        Laminate,
-        Oak,
-        Rosewood,
-        Veneer,
-        Pine
-    }
-
-
     class Desk
    {
-
+        public int Width;
+        public int Depth;
+        public int NumberOfDrawers;
+        public string SurfaceMaterial;
 
    }
 
 }
-//depth = numDeskDepth.value
 

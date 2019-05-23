@@ -81,6 +81,11 @@ namespace MegaDesk
             return shippingPrice;
         }
 
+        public decimal GetQuotePrice()
+        {
+            return 0;
+        }
+
 
         public void fillSurfaceMaterials()
         {
@@ -129,9 +134,16 @@ namespace MegaDesk
 
             if (!validationErrors())
             {
-                MessageBox.Show("Surface: " + comboBoxSurfaceMaterial.SelectedItem.ToString());
+                //MessageBox.Show("Surface: ");
                 MessageBox.Show("Shipping Cost: " + getShippingCost().ToString());
+
+                Desk newDesk = new Desk();
+
+                DeskQuote newQuote = new DeskQuote();
+
             }
+
+               
 
         }
     }

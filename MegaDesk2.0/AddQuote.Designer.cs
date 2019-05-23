@@ -94,7 +94,7 @@
             this.numericUpDownWidth.Location = new System.Drawing.Point(237, 276);
             this.numericUpDownWidth.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDownWidth.Maximum = new decimal(new int[] {
-            48,
+            96,
             0,
             0,
             0});
