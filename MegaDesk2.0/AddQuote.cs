@@ -153,8 +153,6 @@ namespace MegaDesk
 
                 DeskQuote newQuote = new DeskQuote(inputCustomerName.Text, comboBoxDelivery.SelectedItem.ToString(), GetQuotePrice(), DateTime.Now, newDesk);
 
-                MessageBox.Show("Final Price: " + newQuote.QuotePrice.ToString());
-
                 string fileName = "quotes.json";
                 List<DeskQuote> quotesList;
 
@@ -171,6 +169,9 @@ namespace MegaDesk
                 string convertedJson = JsonConvert.SerializeObject(quotesList, Formatting.Indented);
 
                 File.WriteAllText(fileName, convertedJson);
+
+                DisplayQuote quote = new DisplayQuote(newQuote);
+                quote.Show();
             }
 
 

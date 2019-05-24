@@ -12,14 +12,14 @@ namespace MegaDesk
 {
    public partial class DisplayQuote : Form
    {
-      public DisplayQuote()
+      public DisplayQuote(DeskQuote quote)
       {
          InitializeComponent();
-      }
 
-      private void lblNewQuote_Click(object sender, EventArgs e)
-      {
-
+            lblDeliveriFill.Text = quote.ShippingType;
+            lblFillTotal.Text = lblFillTotal.Text + quote.QuotePrice.ToString();
+            lblFillMaterial.Text = quote.Desk.SurfaceMaterial;
+            lblFillName.Text = quote.CustomerName;
       }
 
       private void bttnCloseNewQuote_Click(object sender, EventArgs e)
@@ -29,22 +29,8 @@ namespace MegaDesk
 
       private void DisplayQuote_Load(object sender, EventArgs e)
       {
-
+            
       }
 
-      private void label2_Click(object sender, EventArgs e)
-      {
-
-      }
-
-      private void lblBaseCost_Click(object sender, EventArgs e)
-      {
-
-      }
-
-      private void lblFillSizeCost_Click(object sender, EventArgs e)
-      {
-
-      }
-   }
+    }
 }
