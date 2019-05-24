@@ -32,10 +32,17 @@ namespace MegaDesk
 
             dataGridView1.DataSource = result.Select(d => new
             {
-                Date = d.QuoteDate,
-                QuotePrice = d.QuotePrice.ToString("c")
+               Date = d.QuoteDate,
+               Name = d.CustomerName,
+               Material = d.Desk.SurfaceMaterial,
+               Price = d.QuotePrice.ToString("c"),
+               Delivery = d.ShippingType,
+               Drawers = d.Desk.NumberOfDrawers,
+               Width = d.Desk.Width,
+               Depth = d.Desk.Depth
+
             }).ToList();
 
-        }
-    }
+      }
+   }
 }
