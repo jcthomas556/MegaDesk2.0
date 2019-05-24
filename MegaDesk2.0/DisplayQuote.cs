@@ -31,5 +31,20 @@ namespace MegaDesk
       {
 
       }
+
+      private void label2_Click(object sender, EventArgs e)
+      {
+
+      }
+
+      private void lblBaseCost_Click(object sender, EventArgs e)
+      {
+
+      }
+
+      private void lblFillSizeCost_Click(object sender, EventArgs e)
+      {
+
+      }
    }
 }
