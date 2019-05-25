@@ -22,6 +22,7 @@ namespace MegaDesk
         }
 
         public JObject document = JObject.Parse(File.ReadAllText("document.json"));
+        public decimal basePrice = 200;
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -96,7 +97,7 @@ namespace MegaDesk
 
         public decimal GetQuotePrice()
         {
-            decimal basePrice = 200;
+
             return (getDrawerCost() + getShippingCost() + getWeight() + basePrice + getSurfaceMaterialPrice());
 
         }
@@ -149,7 +150,7 @@ namespace MegaDesk
 
             if (!validationErrors())
             {
-                Desk newDesk = new Desk(numericUpDownWidth.Value, numericUpDownDepth.Value, numericUpDownNumOfDrawers.Value, comboBoxSurfaceMaterial.SelectedItem.ToString());
+                Desk newDesk = new Desk(int.Parse(numericUpDownWidth.Value.ToString()), int.Parse(numericUpDownDepth.Value.ToString()), int.Parse(numericUpDownNumOfDrawers.Value.ToString()), comboBoxSurfaceMaterial.SelectedItem.ToString());
 
                 DeskQuote newQuote = new DeskQuote(inputCustomerName.Text, comboBoxDelivery.SelectedItem.ToString(), GetQuotePrice(), DateTime.Now, newDesk);
 
@@ -170,7 +171,7 @@ namespace MegaDesk
 
                 File.WriteAllText(fileName, convertedJson);
 
-                DisplayQuote quote = new DisplayQuote(newQuote);
+                DisplayQuote quote = new DisplayQuote(newQuote, basePrice, getShippingCost(), getDrawerCost(), getSurfaceMaterialPrice(), getWeight());
                 quote.Show();
             }
 

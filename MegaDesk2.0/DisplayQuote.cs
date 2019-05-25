@@ -12,14 +12,19 @@ namespace MegaDesk
 {
    public partial class DisplayQuote : Form
    {
-      public DisplayQuote(DeskQuote quote)
+      public DisplayQuote(DeskQuote quote, decimal basePrice, decimal shippingCost, decimal drawersCost, decimal surfaceDecimal, decimal weight)
       {
          InitializeComponent();
 
             lblDeliveriFill.Text = quote.ShippingType;
             lblFillTotal.Text = lblFillTotal.Text + quote.QuotePrice.ToString();
-            lblFillMaterial.Text = quote.Desk.SurfaceMaterial;
+            lblAreaCost.Text = "$" + weight.ToString();
             lblFillName.Text = quote.CustomerName;
+            lblFillShipping.Text = "$" + shippingCost.ToString();
+            lblFillDrawers.Text = "$" + drawersCost.ToString();
+            lblSurfaceCost.Text = "$" + surfaceDecimal.ToString();
+            lblBaseCost.Text = "$" + basePrice.ToString();
+
       }
 
       private void bttnCloseNewQuote_Click(object sender, EventArgs e)
